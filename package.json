@@ -1,0 +1,25 @@
+{
+  "name": "gym-buddy",
+  "version": "1.0.0",
+  "description": "A simple friend matching app that helps you find a workout partner. Built with javascript, jQuery, NodeJS, and ExpressJS.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrystalEspaillat/Gym-Buddy.git"
+  },
+  "author": "Crystal Espaillat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrystalEspaillat/Gym-Buddy/issues"
+  },
+  "homepage": "https://github.com/CrystalEspaillat/Gym-Buddy#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
