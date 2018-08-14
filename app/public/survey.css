@@ -1,0 +1,49 @@
+/* The Survey */
+/* ////////////////////////////////////////*/
+
+header {
+    text-align: center;
+    background: #2F2F2F;
+    background-image: url(surveybg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    width: 100%;
+    padding: 7%;
+    color: whitesmoke;
+}
+
+.container-fluid {
+    padding: 5% 10%;
+}
+
+.num {
+    font-weight: bold;
+    color: #C62637;
+    font-size: 18pt;
+}
+
+label {
+    font-weight: bold;
+}
+
+.button {
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #2F2F2F;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: dimgray;
+}
+
+/* The Popup */
+/* ////////////////////////////////////////*/

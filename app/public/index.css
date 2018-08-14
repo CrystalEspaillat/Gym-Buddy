@@ -1,5 +1,5 @@
 body {
-    min-height: 100 vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@ body {
 header {
     text-align: center;
     background: #2F2F2F;
-    background-image: url(fitfriends.jpg);
+    background-image: url(index.jpg);
     background-position: center;
     background-size: cover;
     background-blend-mode: overlay;

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fit Friends: The Gym Buddy Finder</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="survey.css">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<header>
+    <h1>Friend Survey</h1>
+    <i class="fa fa-arrow-down"></i> <br>
+
+</header>
+
+<div class="container-fluid">
+    
+    <form role="form">
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h1>Your Profile</h1>
+        </div>
+
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="photo">Photo URL</label>
+                <input type="text" class="form-control" id="photo">
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h1>Survey Questions</h1>
+        </div>
+
+        <div class="panel-body">
+
+            <span class="num">01 |</span> <label for="q01">Days per week of exercise?</label>
+            <select class="form-control" id="q01">
+                <option>1 Day</option>
+                <option>2 Days</option>
+                <option>3 Days</option>
+                <option>4 Days</option>
+                <option>5+ Days</option>
+            </select>
+
+            <br>
+        
+            <span class="num">02 |</span> <label for="q02"> When do you exercise?</label>
+            <select class="form-control" id="q02">
+                <option>4am-7am - Early mornings</option>
+                <option>8am-11am - Late mornings</option>
+                <option>12pm-2pm - Afternoons</option>
+                <option>3pm-6pm - Early evenings</option>
+                <option>6pm-Midnight - Late nights</option>
+            </select>
+
+            <br>
+
+            <span class="num">03 |</span> <label for="q03"> I enjoy lifting weights every week.</label>
+            <select class="form-control" id="q03">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Somewhat Disagree)</option>
+                <option>3 (Neutral/Sometimes)</option>
+                <option>4 (Somewhat Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+
+            <span class="num">04 |</span> <label for="q04"> I enjoy doing cardio every week.</label>
+            <select class="form-control" id="q04">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Somewhat Disagree)</option>
+                <option>3 (Neutral/Sometimes)</option>
+                <option>4 (Somewhat Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+
+            <span class="num">05 |</span> <label for="q05"> I work on flexibility every week.</label>
+            <select class="form-control" id="q05">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Somewhat Disagree)</option>
+                <option>3 (Neutral/Sometimes)</option>
+                <option>4 (Somewhat Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+
+            <span class="num">06 |</span> <label for="q06"> I am competetive about fitness.</label>
+            <select class="form-control" id="q06">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Somewhat Disagree)</option>
+                <option>3 (Neutral/Sometimes)</option>
+                <option>4 (Somewhat Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+
+            <span class="num">07 |</span> <label for="q07"> Sport that you're training for? </label>
+            <select class="form-control" id="q07">
+                <option>I am not training for a sport.</option>
+                <option>I am a yogi in training.</option>
+                <option>I am a power lifter.</option>
+                <option>I am a bikini competetitor.</option>
+                <option>I am training for an obstacle course race.</option>
+            </select>
+            
+            <br>
+
+            <span class="num">08 |</span> <label for="q08"> I am interested in weight loss. </label>
+            <select class="form-control" id="q08">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Somewhat Disagree)</option>
+                <option>3 (Neutral/Sometimes)</option>
+                <option>4 (Somewhat Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+            
+            <br>
+
+            <span class="num">09 |</span> <label for="q09"> I need accountability to exercise. </label>
+            <select class="form-control" id="q09">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Somewhat Disagree)</option>
+                <option>3 (Neutral/Sometimes)</option>
+                <option>4 (Somewhat Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+            
+            <br>
+
+            <span class="num">10 |</span> <label for="q10"> I have a gym membership or want one. </label>
+            <select class="form-control" id="q10">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Somewhat Disagree)</option>
+                <option>3 (Neutral/Sometimes)</option>
+                <option>4 (Somewhat Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+            
+            <br>
+            
+            <div class="button">
+                    <button type="submit" class="btn btn-danger submit"><i class="fa fa-paper-plane"></i> Submit</button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="#"> API Friends List </a> |
+    <a href="#"> GitHub Repo</a>
+</footer>
+    
+</body>
+</html>
