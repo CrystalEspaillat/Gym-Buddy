@@ -47,3 +47,37 @@ footer a:hover {
 
 /* The Popup */
 /* ////////////////////////////////////////*/
+.popup {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.modal {
+    height: 60vh;
+    width: 60vw;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.photo img {
+    width: 300px;
+
+}
+
+.display-name {
+    color: #C62637;
+}
+
