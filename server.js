@@ -1,5 +1,4 @@
 // DEPENDENCIES
-// Series of npm packages that give the server useful functionality
 // /////////////////////////////////////////////////////////////////////////////
 
     var express = require("express");
@@ -7,7 +6,6 @@
     var path = require("path");
 
 // EXPRESS CONFIGURATION
-// Sets up the basic properties for the express server
 // /////////////////////////////////////////////////////////////////////////////
 
     // Tells node to create an "express" server
@@ -21,14 +19,12 @@
     app.use(bodyParser.json());
 
 // ROUTER
-// Points the server to a series of "route" files. Provides a map for how to handle requests.
 // /////////////////////////////////////////////////////////////////////////////
 
-    require("./routes/apiRoutes")(app);
-    require("./routes/htmlRoutes")(app);
+    require("./app/routes/apiRoutes")(app);
+    require("./app/routes/htmlRoutes")(app);
 
 // LISTENER
-// Starts the server
 // /////////////////////////////////////////////////////////////////////////////
 
     app.listen(PORT, function() {
