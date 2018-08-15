@@ -10,7 +10,7 @@ body {
 header {
     text-align: center;
     background: #2F2F2F;
-    background-image: url(index.jpg);
+    background-image: url(indexbg.jpg);
     background-position: center;
     background-size: cover;
     background-blend-mode: overlay;

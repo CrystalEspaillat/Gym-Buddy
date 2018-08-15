@@ -20,8 +20,10 @@
 <div class="popup"> 
     <div class="modal">    
         <h1> Your Best Match:</h1>
-        <h1 class="display-name"><span class="friend-name"></span></h1>
-        <div class="photo"></div>
+        <h1 class="display-name"><span id="friendName"></span></h1>
+        <div id="photoWell"></div><br>
+        <a href="/survey"><button class="btn btn-danger"><i class="fa fa-reload"></i> Start Over</button></a> 
+
     </div>
 </div>
 <!-- End Popup -->
@@ -40,6 +42,7 @@
 
         <div class="panel-heading">
             <h1>Your Profile</h1>
+            <p>Enter your name and a url to your photo.</p>
         </div>
 
         <div class="panel-body">
@@ -50,6 +53,7 @@
             <div class="form-group">
                 <label for="photo">Photo URL</label>
                 <input type="text" class="form-control" id="photo">
+                <br>
             </div>
         </div>
     </div>
@@ -58,116 +62,124 @@
 
         <div class="panel-heading">
             <h1>Survey Questions</h1>
+            <strong>Key:</strong>
+            <ul>
+                <li> <strong>1</strong> - Strongly Disagree </li>
+                <li> <strong>2</strong> - Somewhat Disagree </li>
+                <li> <strong>3</strong> - Sometimes/Neutral </li>
+                <li> <strong>4</strong> - Somewhat Agree </li>
+                <li> <strong>5</strong> - Strongly Agree </li>
+            </ul>
         </div>
 
         <div class="panel-body">
 
-            <span class="num">01 |</span> <label for="q01">Days per week of exercise?</label>
+            <span class="num">01 |</span> <label for="q01">I am energetic.</label>
             <select class="form-control" id="q01">
-                <option>1 Day</option>
-                <option>2 Days</option>
-                <option>3 Days</option>
-                <option>4 Days</option>
-                <option>5+ Days</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
 
             <br>
         
-            <span class="num">02 |</span> <label for="q02"> When do you exercise?</label>
+            <span class="num">02 |</span> <label for="q02"> I workout 5-6 days per week.</label>
             <select class="form-control" id="q02">
-                <option>4am-7am - Early mornings</option>
-                <option>8am-11am - Late mornings</option>
-                <option>12pm-2pm - Afternoons</option>
-                <option>3pm-6pm - Early evenings</option>
-                <option>6pm-Midnight - Late nights</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
 
             <br>
 
             <span class="num">03 |</span> <label for="q03"> I enjoy lifting weights every week.</label>
             <select class="form-control" id="q03">
-                <option>1 (Strongly Disagree)</option>
-                <option>2 (Somewhat Disagree)</option>
-                <option>3 (Neutral/Sometimes)</option>
-                <option>4 (Somewhat Agree)</option>
-                <option>5 (Strongly Agree)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
 
             <br>
 
             <span class="num">04 |</span> <label for="q04"> I enjoy doing cardio every week.</label>
             <select class="form-control" id="q04">
-                <option>1 (Strongly Disagree)</option>
-                <option>2 (Somewhat Disagree)</option>
-                <option>3 (Neutral/Sometimes)</option>
-                <option>4 (Somewhat Agree)</option>
-                <option>5 (Strongly Agree)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
 
             <br>
 
             <span class="num">05 |</span> <label for="q05"> I work on flexibility every week.</label>
             <select class="form-control" id="q05">
-                <option>1 (Strongly Disagree)</option>
-                <option>2 (Somewhat Disagree)</option>
-                <option>3 (Neutral/Sometimes)</option>
-                <option>4 (Somewhat Agree)</option>
-                <option>5 (Strongly Agree)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
 
             <br>
 
             <span class="num">06 |</span> <label for="q06"> I am competetive about fitness.</label>
             <select class="form-control" id="q06">
-                <option>1 (Strongly Disagree)</option>
-                <option>2 (Somewhat Disagree)</option>
-                <option>3 (Neutral/Sometimes)</option>
-                <option>4 (Somewhat Agree)</option>
-                <option>5 (Strongly Agree)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
 
             <br>
 
-            <span class="num">07 |</span> <label for="q07"> Sport that you're training for? </label>
+            <span class="num">07 |</span> <label for="q07"> I am training for a specific sport. </label>
             <select class="form-control" id="q07">
-                <option>I am not training for a sport.</option>
-                <option>I am a yogi in training.</option>
-                <option>I am a power lifter.</option>
-                <option>I am a bikini competetitor.</option>
-                <option>I am training for an obstacle course race.</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
             
             <br>
 
             <span class="num">08 |</span> <label for="q08"> I am interested in weight loss. </label>
             <select class="form-control" id="q08">
-                <option>1 (Strongly Disagree)</option>
-                <option>2 (Somewhat Disagree)</option>
-                <option>3 (Neutral/Sometimes)</option>
-                <option>4 (Somewhat Agree)</option>
-                <option>5 (Strongly Agree)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
             
             <br>
 
-            <span class="num">09 |</span> <label for="q09"> I need accountability to exercise. </label>
+            <span class="num">09 |</span> <label for="q09"> I am self-motivated to exercise. </label>
             <select class="form-control" id="q09">
-                <option>1 (Strongly Disagree)</option>
-                <option>2 (Somewhat Disagree)</option>
-                <option>3 (Neutral/Sometimes)</option>
-                <option>4 (Somewhat Agree)</option>
-                <option>5 (Strongly Agree)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
             
             <br>
 
-            <span class="num">10 |</span> <label for="q10"> I have a gym membership or want one. </label>
+            <span class="num">10 |</span> <label for="q10"> I have/want a gym membership. </label>
             <select class="form-control" id="q10">
-                <option>1 (Strongly Disagree)</option>
-                <option>2 (Somewhat Disagree)</option>
-                <option>3 (Neutral/Sometimes)</option>
-                <option>4 (Somewhat Agree)</option>
-                <option>5 (Strongly Agree)</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
             </select>
             
             <br>
@@ -182,9 +194,88 @@
 </div>
 
 <footer class="footer">
-    <a href="#"> API Friends List </a> |
+    <a href="/api/friends"> API Friends List </a> |
     <a href="https://github.com/CrystalEspaillat/Gym-Buddy"> GitHub Repo</a>
 </footer>
+
+<script type="text/javascript">
+
+$(".submit").on("click", function(event) {
+  event.preventDefault();
+
+    // Grab the form elements
+    var newFriend = {
+    name: $("#name").val().trim(),
+    photo: $("#photo").val().trim(),
+    scores: [
+        $("#q01").val().trim(),
+        $("#q02").val().trim(),
+        $("#q03").val().trim(),
+        $("#q04").val().trim(),
+        $("#q05").val().trim(),
+        $("#q06").val().trim(),
+        $("#q07").val().trim(),
+        $("#q08").val().trim(),
+        $("#q09").val().trim(),
+        $("#q10").val().trim()
+    ]
+    };
+
+    //GET - Gets the data from the Friends List API
+    var currentURL = window.location.origin;
+
+    $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+    .then(function(friends) {
+
+        // // Loop through and display each of the customers
+        // for (var i = 0; i < friends.length; i++) {
+
+        // Populate modal with data
+        $('#friendName').append(friends[5].name);
+        $('#photoWell').append("<img height=300px src='" + friends[5].photo + "'>");
+        
+        // }
+    });
+
+    //POST - Pushes new friend data/ user input into the friends array
+    $.post("/api/friends", newFriend,
+        function(data) {
+            alert("Yay! You are now in the friends API." + JSON.stringify(newFriend));
+
+            // // This turns the user's inputed scores into integers. 
+            // for (i=0; i<newFriend.scores.length; i++) {
+            //     parseInt(newFriend.scores[i]);
+            // }
+
+            // // The accesses the scores inside of the friends array
+            // for(var i = 0; i<friends.length; i++) {
+            //     for(var j=0; j<scores[i].length; j++) {
+            //         parseInt(scores[i]);
+            //     }
+            // }
+
+            // Display pop-up
+            $('.popup').show();
+
+        // Clear the form when submitting
+            $("#name").val("");
+            $("#photo").val("");
+            $("#q01").val("");
+            $("#q02").val("");
+            $("#q03").val("");
+            $("#q04").val("");
+            $("#q05").val("");
+            $("#q06").val("");
+            $("#q07").val("");
+            $("#q08").val("");
+            $("#q09").val("");
+            $("#q10").val("");
+        });
+
+    });
+
+</script>
+
     
 </body>
 </html>

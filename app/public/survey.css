@@ -27,6 +27,11 @@ label {
     font-weight: bold;
 }
 
+li {
+    list-style-type: none;
+    margin-left: -40px;
+}
+
 .button {
     text-align: center;
 }
@@ -55,7 +60,7 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    display:none;
+    display: none;
 }
 
 .modal {
@@ -72,12 +77,20 @@ footer a:hover {
     transform: translate(-50%,-50%);
 }
 
-.photo img {
-    width: 300px;
+.photoWell img{
+    height: 300px;
+    width: 200px;
 
 }
 
 .display-name {
     color: #C62637;
+}
+
+@media only screen and (max-width: 400px) {
+    .modal {
+        height: 90vh;
+        width: 90vw;
+    }
 }
 
