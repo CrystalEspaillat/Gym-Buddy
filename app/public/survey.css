@@ -78,13 +78,22 @@ footer a:hover {
 }
 
 .photoWell img{
-    height: 300px;
-    width: 200px;
-
+    height: 150px;
 }
 
 .display-name {
     color: #C62637;
+}
+
+.close-popup {
+    position: fixed;
+    top: 5px;
+    right:12px;
+    color: silver;
+    font-size: 20pt;
+}
+.close-popup:hover{
+    color: dimgray;
 }
 
 @media only screen and (max-width: 400px) {

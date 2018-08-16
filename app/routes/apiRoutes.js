@@ -7,19 +7,67 @@
 // ROUTING
 // /////////////////////////////////////////////////////////////////////////////
 
+
   module.exports = function(app) {
 
-    // API GET Requests
-    app.get("/api/friends", function(req, res) {
-      res.json(friends);
-    });
+      //a GET route that shows all possible friends data
+      app.get('/api/friends', (req,res) => {
+        res.json(friends);
+      });
 
-    // API POST Requests
-    app.post("/api/friends", function(req, res) {
+      // a POST route that adds user data to the friends array
+      app.post('/api/friends', (req,res) =>{
+      
+      ///////////////////////////////////////////////////
+      // The Great Comparison 
+      
+        // Get the user's scores data
+        var userData = req.body.scores;
+        
+        //Loops through all friends
+        for(i = 0; i < friends.length; i++){
+
+          for(j = 0; j < userData.length; j++){
+            //Save the all scores into variables as numbers
+            var friendsScores = parseInt(friends[i].scores[j]);
+
+            // Save the user score into variable as numbers
+            var userScore = parseInt(userData[j]);
+
+            // Hardcore math to figure out the difference between scores
+            var totalDiff = 100;
+            totalDiff += (Math.abs(friendsScores - userScore));
+          }
+
+          // Empty array to push all of the friends scores into
+          var scoresArray = [];
+          //push total differences into scoresArray
+          scoresArray.push(totalDiff);
+        }
+      
+      ///////////////////////////////////////////////////
+      //Match Maker Logic
+
+        //Variable to capture the best match
+        var bestFriend = 0;
+        // Loop through all of the total differences
+        for(i = 0; i < scoresArray.length; i++){
+          // if the total difference is less than or equal to zero
+          if(scoresArray[i] < scoresArray[bestFriend]){
+            // Need logic in here to spit out the real bestFriend
+          }
+        }
   
-        friends.push(req.body);
-        res.json(true);
+      ///////////////////////////////////////////////////
+      //The Final Answer!!!!!! 
 
+        // Right now its always saying Alex is the bestFriend because hes index zero
+        var finalAnswer = friends[bestFriend];
+
+        // Sends to data over to the survey page
+        res.json(finalAnswer);
+        //pushes the user into the friends array last so that theyre not included in the comparison
+        friends.push(req.body);
     });
     
   };

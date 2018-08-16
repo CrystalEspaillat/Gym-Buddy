@@ -19,11 +19,11 @@
 <!-- Popup - Not visible -->    
 <div class="popup"> 
     <div class="modal">    
+        <a href="/survey"><div class="close-popup"> <i class="fa fa-times"></i> </div></a>
         <h1> Your Best Match:</h1>
         <h1 class="display-name"><span id="friendName"></span></h1>
         <div id="photoWell"></div><br>
-        <a href="/survey"><button class="btn btn-danger"><i class="fa fa-reload"></i> Start Over</button></a> 
-
+        <a href="/api/friends"><button class="btn btn-secondary"> Friends List</button></a> 
     </div>
 </div>
 <!-- End Popup -->
@@ -204,7 +204,7 @@ $(".submit").on("click", function(event) {
   event.preventDefault();
 
     // Grab the form elements
-    var newFriend = {
+    var user = {
     name: $("#name").val().trim(),
     photo: $("#photo").val().trim(),
     scores: [
@@ -221,58 +221,33 @@ $(".submit").on("click", function(event) {
     ]
     };
 
-    //GET - Gets the data from the Friends List API
-    var currentURL = window.location.origin;
-
-    $.ajax({ url: currentURL + "/api/friends", method: "GET" })
-    .then(function(friends) {
-
-        // // Loop through and display each of the customers
-        // for (var i = 0; i < friends.length; i++) {
-
-        // Populate modal with data
-        $('#friendName').append(friends[5].name);
-        $('#photoWell').append("<img height=300px src='" + friends[5].photo + "'>");
-        
-        // }
-    });
-
     //POST - Pushes new friend data/ user input into the friends array
-    $.post("/api/friends", newFriend,
+    $.post("/api/friends", user,
         function(data) {
-            alert("Yay! You are now in the friends API." + JSON.stringify(newFriend));
 
-            // // This turns the user's inputed scores into integers. 
-            // for (i=0; i<newFriend.scores.length; i++) {
-            //     parseInt(newFriend.scores[i]);
-            // }
-
-            // // The accesses the scores inside of the friends array
-            // for(var i = 0; i<friends.length; i++) {
-            //     for(var j=0; j<scores[i].length; j++) {
-            //         parseInt(scores[i]);
-            //     }
-            // }
+            //Grab the data from the AJAX post to show match name and pic.
+            $("#friendName").text(data.name);
+            $('#photoWell').append("<img height=300px src='" + data.photo + "'>"); 
 
             // Display pop-up
             $('.popup').show();
 
-        // Clear the form when submitting
-            $("#name").val("");
-            $("#photo").val("");
-            $("#q01").val("");
-            $("#q02").val("");
-            $("#q03").val("");
-            $("#q04").val("");
-            $("#q05").val("");
-            $("#q06").val("");
-            $("#q07").val("");
-            $("#q08").val("");
-            $("#q09").val("");
-            $("#q10").val("");
+            // Clear the form when submitting
+                $("#name").val("");
+                $("#photo").val("");
+                $("#q01").val("");
+                $("#q02").val("");
+                $("#q03").val("");
+                $("#q04").val("");
+                $("#q05").val("");
+                $("#q06").val("");
+                $("#q07").val("");
+                $("#q08").val("");
+                $("#q09").val("");
+                $("#q10").val("");
         });
-
     });
+
 
 </script>
 

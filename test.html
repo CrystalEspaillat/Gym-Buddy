@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+
+<div id="friendName"></div>
+<br>
+<div id="photoWell"></div>
+
+
+<script>
+    var user = 
+        {
+        name: "Crystal",
+        photo: "http://i63.tinypic.com/x55fuh.jpg",
+        scores: [
+        "5",
+        "4",
+        "5",
+        "4",
+        "5",
+        "1",
+        "1",
+        "5",
+        "4",
+        "5" ]
+    }
+
+    var friends = [
+        {
+        name: "Alex",
+        photo: "http://i68.tinypic.com/259a2s0.jpg",
+        scores: [
+        "3",
+        "4",
+        "5",
+        "1",
+        "5",
+        "5",
+        "4",
+        "1",
+        "5",
+        "5" ]
+    },
+    {
+        name: "Bobby",
+        photo: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        scores: [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1" ]
+    } 
+    ];
+
+    // // /////////////////////////////////////////////////
+    // // Find the total of the user's score
+   
+    // // Grab the scores from the array in the user object
+    // var userScore = user['scores'].map(function(score) {
+    //     // Converts the string to a number
+    //     score = parseFloat(score);        
+    //     //Save it back into the output array
+    //     return score;
+    // });
+    // // Reassign userScore to display the total of all the scores.
+    // userScore = userScore.reduce(function(acc, val) { return acc + val; }, 0)
+    // console.log(userScore);
+
+    // //////////////////////////////////////////////////
+    // Find the totals of each friend's score
+
+    // Declare function that plucks a value from an object
+    function pluck(array, property) {
+        var pluckedArrays = array.map(function(obj){ 
+            return obj[property];
+        });
+        return pluckedArrays;
+    }
+
+    // Pluck out the scores from each friend object
+    var arrayOfScores = pluck(friends, 'scores');
+
+    // Adds up all of the elements in the arrays
+    arrayOfTotals = arrayOfScores.map(function(array){
+            return array.reduce(function(a,b){
+                return parseInt(a)+parseInt(b);
+        });
+    });
+    // See the array of totals in the console.
+    console.log(arrayOfTotals);
+
+
+
+
+    // Reassign userScore to display the total of all the scores.
+    // parsedScores = parsedScores.reduce(function(acc, val) { return acc + val; }, 0)
+    // console.log('Friends Scores: ' + parsedScores);
+
+    // /////////////////////////////////////////////////
+    // Find the difference between the user's score and each friend's score
+
+
+    // /////////////////////////////////////////////////
+
+
+
+
+    // Populate modal with data
+    $('#friendName').append(friends[1].name);
+    $('#photoWell').append("<img height=300px src='" + friends[1].photo + "'>");
+
+</script>
+    
+</body>
+</html>
