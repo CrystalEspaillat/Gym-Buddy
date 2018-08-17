@@ -9,8 +9,6 @@ A simple friend matching app that helps you find a workout partner. Built with j
 
 **Video Demo**
 
-[[Video Demo of FitFriends](https://youtu.be/6NDKSBmkj0o)]
-
 [![Video Demo of FitFriends](https://i.ytimg.com/vi/6NDKSBmkj0o/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAgJT67SEmpeste3U3vcoIl6zw_LA)](https://youtu.be/6NDKSBmkj0o)]
 
 
