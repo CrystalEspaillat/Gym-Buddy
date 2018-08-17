@@ -8,7 +8,9 @@ A simple friend matching app that helps you find a workout partner. Built with j
 - User can view the Friends List API in json format. 
 
 **Video Demo**
+
 [[Video Demo of FitFriends](https://youtu.be/6NDKSBmkj0o)]
+<iframe width="560" height="315" src="https://youtu.be/6NDKSBmkj0o" frameborder="0" allowfullscreen></iframe>
 
 
 
