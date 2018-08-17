@@ -16,16 +16,21 @@
       });
 
       // a POST route that adds user data to the friends array
-      app.post('/api/friends', (req,res) =>{
+      app.post('/api/friends', (req,res) => {
       
       ///////////////////////////////////////////////////
       // The Great Comparison 
       
         // Get the user's scores data
         var userData = req.body.scores;
+
+        // Empty array to push all of the friends scores into
+        var scoresArray = [];
         
         //Loops through all friends
         for(i = 0; i < friends.length; i++){
+
+          var totalDiff = 0;
 
           for(j = 0; j < userData.length; j++){
             //Save the all scores into variables as numbers
@@ -35,12 +40,9 @@
             var userScore = parseInt(userData[j]);
 
             // Hardcore math to figure out the difference between scores
-            var totalDiff = 100;
-            totalDiff += (Math.abs(friendsScores - userScore));
+            totalDiff += (Math.abs(userScore - friendsScores));
           }
 
-          // Empty array to push all of the friends scores into
-          var scoresArray = [];
           //push total differences into scoresArray
           scoresArray.push(totalDiff);
         }
@@ -50,13 +52,14 @@
 
         //Variable to capture the best match
         var bestFriend = 0;
+
         // Loop through all of the total differences
         for(i = 0; i < scoresArray.length; i++){
-          // if the total difference is less than or equal to zero
-          if(scoresArray[i] < scoresArray[bestFriend]){
-            // Need logic in here to spit out the real bestFriend
-          }
-        }
+          // For every score, if it is less than or equal to 0
+          if (scoresArray[i] <= bestFriend) {
+            bestFriend = i
+        };
+      };
   
       ///////////////////////////////////////////////////
       //The Final Answer!!!!!! 
