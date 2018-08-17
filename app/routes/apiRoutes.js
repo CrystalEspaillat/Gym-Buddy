@@ -30,6 +30,7 @@
         //Loops through all friends
         for(i = 0; i < friends.length; i++){
 
+          // Variable to store the difference in
           var totalDiff = 0;
 
           for(j = 0; j < userData.length; j++){
